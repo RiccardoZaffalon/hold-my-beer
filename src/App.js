@@ -1,56 +1,23 @@
-import React from 'react';
-import Layout from './layouts/Default';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React from "react";
+import Layout from "./layouts/Default";
+import Beers from "./routes/Beers";
+import Add from "./routes/Add";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
   return (
     <Router>
       <Layout>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/beers">
+            <Beers />
           </Route>
           <Route path="/">
-            <Home />
+            <Add />
           </Route>
         </Switch>
       </Layout>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
