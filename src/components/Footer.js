@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../styles/variables';
 
 const Footer = styled.footer`
-    background: blue;
+    background: ${colors.background.secondary};
+    color: ${colors.foreground.primary};
 `;
 
 export default function () {
