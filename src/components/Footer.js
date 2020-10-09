@@ -1,11 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { colors } from "../styles/variables";
+import { colors, spacing, sizing } from "../styles/variables";
 
 const Footer = styled.footer`
   background: ${colors.background.secondary};
   color: ${colors.foreground.primary};
+  padding: 0 ${spacing.medium};
+  height: ${sizing.footer};
+
+  nav,
+  ul {
+    height: 100%;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer__link {
+    background: transparent;
+    border: none;
+    color: ${colors.foreground.secondary};
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+
+    &.active {
+      color: ${colors.foreground.primary};
+    }
+  }
 `;
 
 export default function () {
@@ -14,13 +40,17 @@ export default function () {
       <nav>
         <ul>
           <li>
-            <Link to="/">Add</Link>
+            <NavLink exact className="footer__link" to="/">
+              Add
+            </NavLink>
           </li>
           <li>
-            <Link to="/beers">Beers</Link>
+            <NavLink exact className="footer__link" to="/beers">
+              Beers
+            </NavLink>
           </li>
           <li>
-            <button>Logout</button>
+            <button className="footer__link">Logout</button>
           </li>
         </ul>
       </nav>
