@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Beer from "../components/Beer";
+import Input from "../components/Input";
 import { colors, sizing } from "../styles/variables";
 
 const beers = [
@@ -58,6 +59,7 @@ const Scrim = styled.div`
 export default function Beers() {
   return (
     <>
+      <Input />
       <ul>
         {beers.map(({ name, description, stars }, index) => {
           return (

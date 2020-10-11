@@ -4,6 +4,7 @@ export const colors = {
   foreground: {
     primary: "#ffffff",
     secondary: "#999999",
+    accent: "#6094E2",
   },
   background: {
     primary: "#111111",
@@ -12,6 +13,10 @@ export const colors = {
   card: {
     background: transparentize(0.9, "white"),
     foreground: "#d3d3d3",
+    secondary: transparentize(0.6, "white"),
+  },
+  form: {
+    label: "#95A2B6",
   },
 };
 
