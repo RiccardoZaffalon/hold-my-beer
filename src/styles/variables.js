@@ -17,6 +17,11 @@ export const colors = {
   },
   form: {
     label: "#95A2B6",
+    input: {
+      border: transparentize(0.9, "#e7e7e7"),
+      background: transparentize(0.93, "white"),
+      color: "#999999",
+    },
   },
 };
 
@@ -28,6 +33,7 @@ export const spacing = {
   medium: `${base * 2}px`,
   large: `${base * 2.5}px`,
   larger: `${base * 3}px`,
+  huge: `${base * 4}px`,
 };
 
 export const sizing = {

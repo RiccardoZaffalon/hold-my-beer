@@ -59,7 +59,7 @@ const Scrim = styled.div`
 export default function Beers() {
   return (
     <>
-      <Input />
+      <Input type="search" placeholder="Search" />
       <ul>
         {beers.map(({ name, description, stars }, index) => {
           return (
