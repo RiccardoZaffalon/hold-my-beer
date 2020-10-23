@@ -27,11 +27,12 @@ const Label = styled.label`
   }
 `;
 
-export default function Input({ label, placeholder, type }) {
+export default function Input({ label, ...props }) {
+  const type = props.type || "text";
   return (
     <Label>
       {label && <span>{label}</span>}
-      <input type={type || "text"} placeholder={placeholder} />
+      <input type={type} {...props} />
     </Label>
   );
 }
