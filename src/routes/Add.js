@@ -54,6 +54,9 @@ export default function Add() {
         placeholder="Bitter but good"
       />
       <Input
+        type="number"
+        min="0"
+        max="5"
         value={beer.rating}
         onChange={handleRatingChange}
         label="Let's give it a score"
