@@ -8,7 +8,11 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
-  const [logged] = useState(true);
+  const [logged, setLogged] = useState(false);
+
+  function logIn() {
+    setLogged(true);
+  }
 
   return (
     <Router>
@@ -16,7 +20,9 @@ export default function App() {
         <Switch>
           <Route
             path="/login"
-            render={(props) => <Login {...props} logged={logged} />}
+            render={(props) => (
+              <Login {...props} logged={logged} login={logIn} />
+            )}
           />
           <ProtectedRoute logged={logged} path="/beers" component={Beers} />
           <ProtectedRoute logged={logged} path="/" component={Add} />

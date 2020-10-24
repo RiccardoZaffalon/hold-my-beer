@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { colors, sizing } from "../styles/variables";
+import Button from "../components/Button";
 
-export default function Login(props) {
-  return <>{props.logged ? "awesome" : "Please login"}</>;
+export default function Login({ logged, login }) {
+  return <>{logged ? "Great!" : <Button onClick={login}>Login</Button>}</>;
 }
