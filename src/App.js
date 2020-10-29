@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <Router>
-      <Layout>
+      <Layout user={logged}>
         <Switch>
           <Route
             path="/login"

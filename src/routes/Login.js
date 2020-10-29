@@ -1,6 +1,10 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
+
 import Button from "../components/Button";
 
 export default function Login({ logged, login }) {
-  return <>{logged ? "Great!" : <Button onClick={login}>Login</Button>}</>;
+  return (
+    <>{logged ? <Redirect to="/" /> : <Button onClick={login}>Login</Button>}</>
+  );
 }

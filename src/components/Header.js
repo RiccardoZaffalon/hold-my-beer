@@ -25,11 +25,11 @@ const Header = styled.header`
   }
 `;
 
-export default function () {
+export default function ({ user }) {
   return (
     <Header>
       <h1>hmb</h1>
-      <span className="user">Cheers, User</span>
+      <span className="user">Cheers, {user ? "User" : "Stranger"}</span>
     </Header>
   );
 }

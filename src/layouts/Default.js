@@ -19,12 +19,12 @@ const Main = styled.main`
   overflow-y: auto;
 `;
 
-export default function Default({ children }) {
+export default function Default({ children, ...rest }) {
   return (
     <Wrapper>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
+      <Header {...rest} />
+      <Main {...rest}>{children}</Main>
+      <Footer {...rest} />
     </Wrapper>
   );
 }
