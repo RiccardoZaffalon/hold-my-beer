@@ -34,7 +34,7 @@ const Footer = styled.footer`
   }
 `;
 
-export default function () {
+export default function ({ logout }) {
   return (
     <Footer>
       <nav>
@@ -50,7 +50,9 @@ export default function () {
             </NavLink>
           </li>
           <li>
-            <button className="footer__link">Logout</button>
+            <button className="footer__link" onClick={logout}>
+              Logout
+            </button>
           </li>
         </ul>
       </nav>

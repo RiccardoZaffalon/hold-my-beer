@@ -29,7 +29,9 @@ export default function ({ user }) {
   return (
     <Header>
       <h1>hmb</h1>
-      <span className="user">Cheers, {user ? "User" : "Stranger"}</span>
+      <span className="user">
+        Cheers, {user ? user.displayName : "Stranger"}
+      </span>
     </Header>
   );
 }
