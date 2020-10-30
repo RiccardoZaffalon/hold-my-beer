@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import * as firebase from "firebase";
 import "firebase/database";
-import { useAuthState } from "react-firebase-hooks/auth";
+// import { useAuthState } from "react-firebase-hooks/auth";
 
 import firebaseConfig from "./config/firebase";
 import Layout from "./layouts/Default";
@@ -16,7 +16,8 @@ firebase.initializeApp(firebaseConfig);
 const provider = new firebase.auth.GoogleAuthProvider();
 
 export default function App() {
-  const [user, loading, error] = useAuthState(firebase.auth());
+  // const [user, loading] = useAuthState(firebase.auth());
+  const [user, loading] = useState({});
 
   function logIn() {
     firebase.auth().signInWithPopup(provider);

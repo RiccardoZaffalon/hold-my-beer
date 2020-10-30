@@ -8,6 +8,7 @@ const Footer = styled.footer`
   color: ${colors.foreground.primary};
   padding: 0 ${spacing.medium};
   height: ${sizing.footer};
+  z-index: 6;
 
   nav,
   ul {

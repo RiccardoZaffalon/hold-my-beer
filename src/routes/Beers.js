@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Beer from "../components/Beer";
 import Input from "../components/Input";
+import Notification from "../components/Notification";
+import Emoji from "../components/Emoji";
 import { colors, sizing } from "../styles/variables";
 
 const beers = [
@@ -75,6 +77,10 @@ export default function Beers() {
 
       {/* Scrim should be disabled on scroll */}
       {false && <Scrim aria-hidden="true" />}
+      <Notification prompt="Got it">
+        You can delete beers by long-tapping on them{" "}
+        <Emoji symbol="🤙" label="Thumbs up!" />
+      </Notification>
     </>
   );
 }
